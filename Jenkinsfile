@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     options {
-        skipDefaultCheckout
+        skipDefaultCheckout()
 	//skipDefaultChekout(true)
         buildDiscarder(logRotator(numToKeepStr: '5')) //Decide what builds to discard and what builds to keep
         disableConcurrentBuilds()
